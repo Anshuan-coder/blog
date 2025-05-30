@@ -1,0 +1,42 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+const int N = 1e6 + 10;
+ 
+ 
+ll t, n;
+ll a[N];
+string s;
+ 
+int main()
+{
+    ios::sync_with_stdio(false);
+    cin.tie(0);
+    cout.tie(0);
+ 
+    cin >> t;
+ 
+    while(t--)
+    {
+        n = 0;
+        cin >> s;
+        for(int i = 1; i < s.size() - 1; i++)
+        {
+            if(s[i] == '(')
+                n++;
+            else
+                n--;
+            if(n < 0)   
+            {
+                break;
+            }
+        }
+        if(n == 0)cout << "NO\n";
+        else cout <<"YES\n";
+ 
+        
+ 
+    }
+ 
+   return 0;
+}
